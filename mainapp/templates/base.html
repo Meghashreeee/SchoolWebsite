@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Doodle+Triangles&family=Rubik+Lines&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald&family=Rubik&family=Single+Day&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% block head %}
     {% endblock head %}
 </head>
@@ -20,7 +23,7 @@
         <div class="header__content--flow">
             <section class="header-content--left">
                 <a href="#" class="brand-logo">
-                  <img src="{% static 'Images/logo.svg' %}" class="animate__animated  animate__jello" />
+                  <img src="{% static 'Images/logo/logo1.png' %}" height="50px" class="animate__animated  animate__jello" />
                     <span class="logo-text animate__animated animate__bounceInDown">Site</span>
                 </a>
                 <button class="nav-toggle">
@@ -34,17 +37,16 @@
                             <a class="nav__link" href="{% url 'mainapp:home' %}">Home</a>
                         </li>
                         <li class="list-item">
-                            <a class="nav__link" href="#">About</a>
+                            <a class="nav__link" href="{% url 'mainapp:about' %}">About</a>
                         </li>
                         <li class="list-item">
-                        {% if user.is_authenticated %}
                           <a class="nav__link" href="#">Faculty</a>
-                        {% else %}
-                            <a class="nav__link" href="#">Events</a>
-                           {% endif %}
                         </li>
                         <li class="list-item">
-                            <a class="nav__link" href="#">Contact</a>
+                            <a class="nav__link" href="#">Events</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="nav__link" href="{% url 'mainapp:contact' %}">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -54,10 +56,10 @@
 
 </div>
 <div class="outer-container">
-<div class="head-space"></div>
 
     {% block body %}
     {% endblock body %}
+    
 </div>
 <div class="footer">
   copyright@ Meghashree Timepass Bhat

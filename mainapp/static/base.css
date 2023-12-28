@@ -13,20 +13,45 @@
     --bg-primary: hsl(195, 20%, 86%);
     --border-clr: hsl(195, 16%, 82%);
     --accent-blue: hsl(205, 100%, 48%);
-    --text-primary: hsl(180, 6%, 38%);
+    --text-primary: hsl(0, 0%, 100%);
     --text-accent: hsl(195, 2%, 78%);
-
     --header: 3.5rem;
     --full-width: 100%;
-    --padding-space: calc(var(--full-width) - 2rem);
+    --padding-space: calc(var(
+    --full-width) - 2rem);
     --max-width: 80rem;
     --min-width: 22.5rem;
-
     --bd-radius: 0.5em;
     --space-025: 0.25rem;
     --space-05: 0.5rem;
     --space-1: 1rem;
 }
+
+
+/* style scroll */
+
+::-webkit-scrollbar {
+    width: 5px;
+    
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius:10px ;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #555;
+}
+
+/* end style scroll */
+
 
 a {
     text-decoration: none;
@@ -37,7 +62,9 @@ body {
     flex-flow: column;
     min-block-size: 100vh;
     font-family: system-ui;
-    background: linear-gradient(180deg, #581845, #900C3F, #C70039, #FF5733, #FFC300);
+    background: rgb(2,0,36);
+background: linear-gradient(15deg, rgba(2,0,36,1) 68%, rgba(15,255,234,1) 100%);
+    /* background: linear-gradient(180deg, #581845, #900C3F, #C70039, #FF5733, #FFC300); */
 }
 
 .container {
@@ -54,13 +81,14 @@ body {
 }
 
 .site-header {
+    /* background: #ffffff26; */
     --padding: 1rem;
     --header-margin: 5vh;
-    --shadow: 0 0.1875em 0.3125em #0003, 0 0.125em 0.5em #0002;
+    --shadow: 0 0.1875em 0.3125em #0000001f, 0 0.125em 0.5em #0002;
     margin-block: auto;
     min-block-size: var(--header);
-    background-color: #fff;
-    outline: 1px solid var(--border-clr);
+    background-color: #0006;
+    /* outline: 1px solid var(--border-clr); */
     border-radius: var(--bd-radius);
     padding-inline: var(--padding);
     box-shadow: var(--shadow);
@@ -240,15 +268,16 @@ body {
         gap: var(--space-05) 0;
         position: fixed;
         width: 10em;
-        background-color: #fff;
+        background-color: #000000d9;
         border-radius: var(--bd-radius);
-        border: 1px solid var(--border-clr);
+        border: 1px solid hsl(195deg 8.06% 15.45%);
         padding-block: 0.5rem;
         grid-auto-flow: row;
         box-shadow: var(--shadow);
         visibility: hidden;
         opacity: 0;
     }
+    
 
     .nav__list[aria-expanded="true"] {
         visibility: visible;
