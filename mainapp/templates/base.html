@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'base.css' %}">
+<!--    add favicon-->
+    <link rel="shortcut icon" href="{% static 'Images/logo/logo1.png' %}" type="image/x-icon">
     <script src="{% static 'jquery-3.7.1.min.js' %}"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald&family=Rubik&family=Single+Day&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     {% block head %}
     {% endblock head %}
 </head>
@@ -37,7 +35,7 @@
                             <a class="nav__link" href="{% url 'mainapp:home' %}">Home</a>
                         </li>
                         <li class="list-item">
-                            <a class="nav__link" href="{% url 'mainapp:about' %}">About</a>
+                            <a class="nav__link" href="#">About</a>
                         </li>
                         <li class="list-item">
                           <a class="nav__link" href="#">Faculty</a>
@@ -46,7 +44,7 @@
                             <a class="nav__link" href="#">Events</a>
                         </li>
                         <li class="list-item">
-                            <a class="nav__link" href="{% url 'mainapp:contact' %}">Contact</a>
+                            <a class="nav__link" href="#">Contact</a>
                         </li>
                     </ul>
                 </nav>
