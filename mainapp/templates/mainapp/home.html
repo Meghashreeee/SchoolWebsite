@@ -7,15 +7,31 @@
 {% endblock head %}
 {% block body %}
 <div class="inner-container">
-    <div class="section">
+    <div class="section section1">
         <div class="content">
             <h1 class="head">Government Marathi
                 Lower Primary School</h1>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, ut cumque, quidem iusto ducimus ipsa provident quod voluptas et placeat odit dolorem recusandae atque voluptatem sint fugiat iste sunt vel ratione. Dolorum commodi, fugiat officiis animi adipisci assumenda exercitationem consectetur.</p>
+            <p class="text">Lorem, quidem iusto ducimus ipsa provident quod voluptas et placeat odit dolorem recusandae atque voluptatem sint fugiat iste sunt vel ratione. Dolorum commodi, fugiat officiis animi adipisci assumenda exercitationem consectetur.</p>
         </div>
-        <div class="image">
-            <img src="{% static 'Images\Event_images\IMG2.jpg' %}" height="250px" alt="header image">
+        <div class="image hidden-mobile">
+            <img src="{% static 'Images\Event_images\IMG2.jpg' %}" class="hidden-mobile" height="250px" alt="header image" >
         </div>
         </div>
+        
+        <div class="section section2">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <h2 class="bounce scroll-bounce flip-head">Mission </h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere fugit consectetur, nesciunt nam omnis incidunt ex quasi laudantium quia aspernatur ut? Labore incidunt, similique sit iusto libero facere obcaecati maxime?</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <h2 class="bounce scroll-bounce flip-head">Vision </h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere fugit consectetur, nesciunt nam omnis incidunt ex quasi laudantium quia aspernatur ut? Labore incidunt, similique sit iusto libero facere obcaecati maxime?</p>
+                  </div>
+                </div>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2714.1826045857597!2d74.4965968060681!3d15.83377896697246!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf64290c7d40f5%3A0x967159aa2ca036ff!2sGovt.Mlps%20No.36%20Tilakwadi!5e0!3m2!1sen!2sin!4v1703962102369!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 </div>
 {% endblock body %}
