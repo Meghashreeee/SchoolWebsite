@@ -1,9 +1,14 @@
 from django.shortcuts import render,HttpResponse
 from django.core.mail import send_mail
+import os
+from SchoolSite import settings
 from SchoolSite.settings import EMAIL_HOST_USER
 # Create your views here.
 app_name = 'mainapp'
 def home(request):
+    path = settings.MEDIA_ROOT
+    img_list = os.listdir(path + "/School_images/")
+    context = {"images": img_list}
     return render(request,'mainapp/home.html')
 
 def about(request):
