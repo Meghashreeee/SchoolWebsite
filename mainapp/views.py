@@ -1,20 +1,25 @@
+from django.http import JsonResponse
 from django.shortcuts import render,HttpResponse
 from django.core.mail import send_mail
 import os
 from SchoolSite import settings
 from SchoolSite.settings import EMAIL_HOST_USER
+from .models import *
 # Create your views here.
 app_name = 'mainapp'
+
 def home(request):
     path = settings.MEDIA_ROOT
     img_list = os.listdir(path + "/School_images/")
-    return render(request,'mainapp/home.html',context={"images": img_list})
+    values = Content.objects.values()
+    Announce = Announcement.objects.values()
+    faculty_list = faculty.objects.values()
+    events_list = Events.objects.values()
+    val= {}
+    for a in values:
+        val[a['Name']] = a['content']
+    return render(request,'mainapp/home.html',context={"images": img_list,'content':val,'Announcements':Announce,'faculty':faculty_list,'events':events_list})
 
-def about(request):
-    return render(request,'mainapp/about.html')
-
-def contact(request):
-    return render(request,'mainapp/contact.html')
 
 def contactform(request):
     if request.method == 'POST':
@@ -29,6 +34,5 @@ def contactform(request):
             ['helloitsme9254@gmail.com','manojpatil9147@gmail.com'],
             fail_silently=False,
         )
-        return render(request,'mainapp/home.html')
+        return JsonResponse({'status':'success'})
     return HttpResponse(status=404)
-

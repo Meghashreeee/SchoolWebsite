@@ -1,3 +1,28 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+
+class Content(models.Model):
+    Name=models.CharField(max_length=100,primary_key=True)
+    content=models.TextField()
+    def __str__(self):
+        return self.Name+" "+self.content
+
+class Announcement(models.Model):
+    announcement=models.TextField()
+    date = models.DateField(default=timezone.now)
+    def __str__(self):
+        return self.announcement+" "+str(self.date)
+
+class faculty(models.Model):
+    name=models.CharField(max_length=100)
+    position=models.CharField(max_length=100,default="Teacher")
+    image=models.ImageField(upload_to='faculty',default="default.jpeg")
+    def __str__(self):
+        return self.name
+
+class Events(models.Model):
+    name=models.CharField(max_length=100)
+    image=models.ImageField(upload_to='events')
+    def __str__(self):
+        return self.name
