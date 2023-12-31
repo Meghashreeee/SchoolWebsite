@@ -8,8 +8,7 @@ app_name = 'mainapp'
 def home(request):
     path = settings.MEDIA_ROOT
     img_list = os.listdir(path + "/School_images/")
-    context = {"images": img_list}
-    return render(request,'mainapp/home.html')
+    return render(request,'mainapp/home.html',context={"images": img_list})
 
 def about(request):
     return render(request,'mainapp/about.html')
