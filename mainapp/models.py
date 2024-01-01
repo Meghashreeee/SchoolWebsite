@@ -24,5 +24,6 @@ class faculty(models.Model):
 class Events(models.Model):
     name=models.CharField(max_length=100)
     image=models.ImageField(upload_to='events')
+    about=models.TextField(default="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus deleniti praesentium a porro ea unde ex laborum beatae nulla modi?")
     def __str__(self):
         return self.name

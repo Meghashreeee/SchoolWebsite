@@ -15,17 +15,14 @@
   flex-wrap: wrap;
   /* align-items: flex-start; */
 }
-.inner-container>.section1{
+.inner-container>.section1 {
   background-size: cover;
-  background-repeat:no-repeat ;
-    
-    border-end-end-radius: 50%;
-    /* border-radius: 0 0 0 25%; */
-    
-    overflow: hidden;
-    /* background-color: #9fc4d4; */
-    background: url("../Images/backgrounds/background2.jpeg");
-    
+  background-repeat: no-repeat;
+  border-end-end-radius: 50%;
+  /* border-radius: 0 0 0 25%; */
+  overflow: hidden;
+  background-color: rgba(99, 160, 186, 0.614);
+  /* background: url("../Images/backgrounds/background2.jpeg"); */
 }
 .inner-container>.section2 {
   align-items: flex-start;
@@ -106,7 +103,7 @@
   .flip-card-back>p{
     padding:2rem;
     /* min-height:250px; */
-    background-color: #2980b9;
+    background-color: rgba(99, 160, 186, 0.614);
     color: white;
   }
 .flip-head{
@@ -145,14 +142,14 @@
 
 #scroll-text>a{
     color:black;
-    background-color: rgba(0, 0, 0, 0.388);
+    background-color: rgba(99, 160, 186, 0.614);
     display: block;
     padding: 1rem;
     border-radius: 5px;
     margin:1rem 1rem;
 }
 #scroll-text>a:hover{
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgba(108, 197, 235, 0.881);
     color:white;
 }
 .scroll-wrapper{
@@ -192,9 +189,9 @@
 /* about header start  */
 .sub-header {
   min-height: 100px;
-  background-color: #2f6e8d;
+  background-color: rgba(99, 160, 186, 0.614);
   /* background: url("../Images/backgrounds/background2.jpeg"); */
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   /* text-align: center; */
   justify-content: center;
@@ -221,7 +218,7 @@
 }
 .about-text {
   border-radius: 10px;
-  background: #a0a0a080;
+  background: rgba(99, 160, 186, 0.614);
   padding: 2rem;
   max-width: 400px;
   text-align: center;
@@ -399,8 +396,8 @@
   margin-bottom:6rem;
 }
 .card-faculty {
-  border: 2px solid #6dcbff;
-  box-shadow: 5px 6px 0px #6dcbff;
+  border: 2px solid rgba(99, 160, 186, 0.614);
+  box-shadow: 5px 6px 0px rgba(99, 160, 186, 0.614);
   transition: 0.3s all;
   border-radius: 3px;
   background-color: #fff;
@@ -414,13 +411,13 @@
 }
 .card-faculty>.avatar>img {
       border-radius: 50%;
-      border: 4px solid #6dcbff;
+      border: 4px solid rgba(99, 160, 186, 0.614);
     }
 
 .card-faculty>.title {
     font-size: 26px;
     margin-top: 18px;
-    color: #6dcbff;
+    color: rgba(99, 160, 186, 0.614);
   }
 
 .card-faculty>.description {
@@ -437,6 +434,7 @@
 /* events starts */
 
 .event-card {
+  width:300px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -447,14 +445,21 @@
 .section6{
   gap:2rem;
 }
-
+.event-img{
+  object-fit: cover;
+}
 .event-card>.text {
+  padding: .5rem;
   border-radius: 0 0 20px 20px;
   display: flex;
-  background-color: #00c9ffc7;
+  background-color: rgba(99, 160, 186, 0.614);
   min-height: 50px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.event-card>.text>* {
+  text-align: center;
 }
 
 /* events end */
@@ -710,7 +715,7 @@ footer hr {
     display: none;
   }
   .about-image {
-    border: solid 10px #a0a0a0;
+    border: solid 10px rgb(0 0 0 / 61%);
     height: 150px;
     margin-bottom: -25px;
     margin-top: 10px;

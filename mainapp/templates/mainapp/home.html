@@ -53,7 +53,7 @@
         </div>
   </div>
   <div class="section section4">
-   <h2 class="head bounce scroll-bounce">Gallary</h2>
+   <h2 class="head bounce scroll-bounce">Gallery</h2>
    <main class="gallary">
     <ul class='slider'>
       {% for image in images %}
@@ -88,8 +88,12 @@
   <div class="section section6">
     {% for event in events %}
     <div class="event-card">
-      <img src="{{MEDIA_URL}}{{event.image}}" height="200px" alt="">
-      <div class="text">{{event.name}}</div>
+      <img src="{{MEDIA_URL}}{{event.image}}" class="event-img" height="200px" width="300px" alt="">
+      <div class="text">
+        <h3>{{event.name}}</h3>
+        <p>{{event.about}}</p>
+      </div>
+      
     </div>
     {% endfor %}
   </div>
@@ -465,7 +469,7 @@
           </div>
           <div class="links">
             <h4>Quick links</h4>
-            <p><a href="{url 'mainapp:home'}">Home</a></p>
+            <p><a href="{% url 'mainapp:home' %}">Home</a></p>
             <p><a href="#about">About</a></p>
             <p><a href="#faculty">Faculty</a></p>
             <p><a href="#contact">Contact</a></p>
@@ -473,8 +477,7 @@
           <div class="details">
             <h4 class="address">Address</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur <br />
-              adipisicing elit. Cupiditate, qui!
+              {{content.address}}
             </p>
             <h4 class="mobile">Mobile</h4>
             <p><a href="#">+91-12225*****</a></p>
