@@ -2,7 +2,7 @@
 {% load static %}
 {% block head %}
 <title>Trio</title>
-<link rel="stylesheet" href="{% static 'MainApp/home.css'%}">
+<link rel="stylesheet" href="{% static 'mainapp/home.css'%}">
 {% endblock head %}
 {% block body %}
 <div class="inner-container">
@@ -56,8 +56,8 @@
    <main class="gallary">
     <ul class='slider'>
       {% for image in images %}
-      <li class='item' style="background-image: url('{{MEDIA_URL}}/School_images/{{image}}')">
-      </li> 
+      <li class='item' style="background-image: url('{{MEDIA_URL}}/School_Images/{{image}}')">
+      </li>
       {% endfor %}
     </ul>
     <nav class='nav'>
@@ -65,14 +65,14 @@
       <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
     </nav>
   </main>
-  
+
   </div>
   <div class="sub-header faculty" id="faculty">Faculty</div>
   <div class="section section5">
     {% for facultys in faculty %}
     <div class="card-faculty">
       <div class="avatar">
-        
+
         <img src="{{MEDIA_URL}}/faculty/{{facultys.image}}">
       </div>
       <div class="title">
@@ -93,12 +93,12 @@
         <h3>{{event.name}}</h3>
         <p>{{event.about}}</p>
       </div>
-      
+
     </div>
     {% endfor %}
   </div>
   <div class="sub-header contact" id="contact">Contact</div>
-  
+
     <div class="container-form d-flex justify-content-center align-items-center">
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
@@ -396,15 +396,15 @@
               </g>
           </g>
       </svg>
-      
-      
+
+
       <!-- // FORM
       -------------------------------------------------------------
       ------------------------------------------------------------>
-      
+
       <form id="contact_form" onsubmit="return validform()">
         <h1 class="title text-center mb-4">Talk to Us</h1>
-    
+
           <!-- Name -->
           <div class="form-group position-relative">
             <label for="formName" class="d-block">
@@ -412,7 +412,7 @@
             </label>
             <input type="text" id="name" id="formName" class="form-control form-control-lg thick" placeholder="Name" required>
           </div>
-    
+
           <!-- E-mail -->
           <div class="form-group position-relative">
             <label for="formEmail" class="d-block">
@@ -420,26 +420,26 @@
             </label>
             <input type="email" id="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail" required>
           </div>
-    
+
           <!-- Message -->
           <div class="form-group message">
             <textarea  id="message" class="form-control form-control-lg" rows="7" placeholder="Message" required></textarea>
           </div>
-        
+
           <!-- Submit btn -->
           <div class="text-center">
             <button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
           </div>
       </form>
   </div>
-  
+
 
   <div class="section section7">
     <div class="footer-upper">
-        
+
         <div class="content">
-         
-        
+
+
           <div class="links">
             <h4>Quick links</h4>
             <p><a href="{% url 'mainapp:home' %}">Home</a></p>
@@ -453,16 +453,16 @@
               {{content.address}}
             </p>
             <h4 class="mobile">Mobile</h4>
-            <p><a href="#">+91-12225*****</a></p>
+            <p><a href="#">{{content.Phone}}</a></p>
             <h4 class="mail">Email</h4>
             <p><a href="#">something@gmail.com</a></p>
           </div>
         </div>
-        
+
       </div>
   </div>
-  
-  
+
+
 </div>
 
 {% endblock body %}
@@ -470,5 +470,5 @@
 {% block script %}
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="{% static 'MainApp/home.js' %}"></script>
+<script src="{% static 'mainapp/home.js' %}"></script>
 {% endblock script %}

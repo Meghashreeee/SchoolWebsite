@@ -20,11 +20,13 @@ function validform(){
         message: message
     }
     setRequestHeader();
-    
+
     $.ajax({
         dataType: 'json',
         type: 'POST',
         url: "/contactform/",
+        context: document.body,
+        cache : false,
         data: data,
         success: function (data) {
             console.log("Success:", data);
@@ -38,8 +40,3 @@ function validform(){
     });
     return false;
 }
-
-
-
-
-

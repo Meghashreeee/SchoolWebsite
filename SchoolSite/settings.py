@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-03b!_06r=q^*pmenz4*107ipk2+*gq_$#gnw$!!m0hfrubub@z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["teamtrio.pythonanywhere.com","127.0.0.1"]
 
 
 # Application definition
@@ -119,9 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'MainApp/static') # 'static' is my static folder
+STATIC_ROOT = os.path.join(BASE_DIR, 'mainapp/static') # 'static' is my static folder
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'MainApp/static/Images') # 'data' is my media folder
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mainapp/static/Images') # 'data' is my media folder
 MEDIA_URL = '/media/'
 
 # Default primary key field type

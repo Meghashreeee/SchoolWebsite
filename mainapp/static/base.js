@@ -53,3 +53,8 @@ container.addEventListener("click", (e) => {
         primaryNav.setAttribute("aria-expanded", "false");
     }
 });
+
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}

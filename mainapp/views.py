@@ -1,3 +1,4 @@
+import random
 from django.http import JsonResponse
 from django.shortcuts import render,HttpResponse
 from django.core.mail import send_mail
@@ -10,7 +11,7 @@ app_name = 'mainapp'
 
 def home(request):
     path = settings.MEDIA_ROOT
-    img_list = os.listdir(path + "/School_images/")
+    img_list = random.sample(os.listdir(path + "/School_images/"),7)
     values = Content.objects.values()
     Announce = Announcement.objects.values()
     faculty_list = faculty.objects.values()
