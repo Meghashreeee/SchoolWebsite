@@ -11,7 +11,7 @@ app_name = 'mainapp'
 
 def home(request):
     path = settings.MEDIA_ROOT
-    img_list = random.sample(os.listdir(path + "/School_images/"),7)
+    img_list = random.sample(os.listdir(path + "/School_Images/"),7)
     values = Content.objects.values()
     Announce = Announcement.objects.values()
     faculty_list = faculty.objects.values()
