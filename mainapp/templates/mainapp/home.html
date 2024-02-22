@@ -54,26 +54,15 @@
   <div class="section section4">
    <h2 class="head bounce scroll-bounce">Gallery</h2>
    <div class="mobile-slideshow-container">
+    {% for image in images %}
     <div class="mobile-mySlides mobile-fade">
-        <img src="https://i.imgur.com/eQkmHx9.jpg" style="width: 100vw;height: 100vh">
-
+        <img src="{{MEDIA_URL}}School_Images/{{image}}" style="width: 100vw;height: 100vh">
     </div>
-    <div class="mobile-mySlides mobile-fade">
-
-        <img src="https://i.imgur.com/QtMelqo.jpg" style="width: 100vw;height: 100vh">
-
-    </div>
-    <div class="mobile-mySlides mobile-fade">
-
-        <img src="https://i.imgur.com/IO2tBwy.jpg" style="width: 100vw;height: 100vh">
-
-    </div>
+    {% endfor %}
     <div style="text-align:center; margin:-5vh;">
-
+        {% for image in images %}
         <span class="mobile-dot"></span>
-        <span class="mobile-dot"></span>
-        <span class="mobile-dot"></span>
-
+      {% endfor %}
     </div>
     <a class="mobile-prev" onclick="mobile_prevSlide()">&#10094;</a>
     <a class="mobile-next" onclick="mobile_showSlides()">&#10095;</a>
