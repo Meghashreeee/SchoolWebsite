@@ -40,3 +40,69 @@ function validform(){
     });
     return false;
 }
+
+
+
+
+// mobile gallary start
+
+var timeOut = 2000;
+var slideIndex = 0;
+var autoOn = true;
+
+mobile_autoSlides();
+
+function mobile_autoSlides() {
+    timeOut = timeOut - 20;
+
+    if (autoOn == true && timeOut < 0) {
+        mobile_showSlides();
+    }
+    setTimeout(mobile_autoSlides, 20);
+}
+
+function mobile_prevSlide() {
+
+    timeOut = 2000;
+
+    var slides = document.getElementsByClassName("mobile-mySlides");
+    var dots = document.getElementsByClassName("mobile-dot");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].classList.remove("mobile-active");
+    }
+    slideIndex--;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    if (slideIndex == 0) {
+        slideIndex = 3
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("mobile-active");
+}
+
+function mobile_showSlides() {
+
+    timeOut = 2000;
+
+    var slides = document.getElementsByClassName("mobile-mySlides");
+    var dots = document.getElementsByClassName("mobile-dot");
+    console.log(dots);
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].classList.remove("mobile-active");
+    }
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("mobile-active");
+}
+
+// mobile gallary end

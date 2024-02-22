@@ -228,6 +228,109 @@
 /* about header end */
 
 
+/* mobile gallary start */
+
+.mobile-mySlides>img{
+  object-fit: cover;
+}
+
+.mobile-mySlides {
+  display: none;
+}
+/* Slideshow container */
+.mobile-slideshow-container {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+/* The dots/bullets/indicators */
+.mobile-dot {
+
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+}
+
+.mobile-active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.mobile-fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes mobile-fade {
+  from {
+      opacity: .4
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+@keyframes mobile-fade {
+  from {
+      opacity: .4
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .mobile-prev,
+  .mobile-next,
+  .mobile-text {
+      font-size: 11px
+  }
+}
+
+/* Next & previous buttons */
+.mobile-prev,
+.mobile-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.mobile-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.mobile-prev:hover,
+.mobile-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* mobile gallary end */
 
 /* gallary start */
 .section4>.head {
@@ -718,9 +821,27 @@ footer hr {
 
 /* footer end */
 @media (max-width: 575px) {
+  form {
+    /* margin: 4rem 0; */
+    align-items: center;
+    gap: 1rem;
+    display: flex;
+    min-width: 25rem;
+    flex-direction: column;
+}
+  .container-form {
+    display: flex;
+    margin:0;
+  }
+  .gallary {
+    display: none;
+}
 
   svg{
     display: none;
+  }
+  .mobile-slideshow-container {
+    display: block;
   }
   .about-image {
     border: solid 10px rgb(0 0 0 / 61%);

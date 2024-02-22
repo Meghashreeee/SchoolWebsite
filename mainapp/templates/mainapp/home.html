@@ -12,7 +12,7 @@
       <p class="text">{{content.Tagline_title}}</p>
     </div>
     <div class="image hidden-mobile">
-      <img src="{% static 'Images\Event_images\IMG2.jpg' %}" class="hidden-mobile" height="250px" alt="header image">
+      <img src="{% static 'Images\School_Images\IMG2.jpg' %}" class="hidden-mobile" height="250px" alt="header image">
     </div>
   </div>
 
@@ -53,6 +53,31 @@
   </div>
   <div class="section section4">
    <h2 class="head bounce scroll-bounce">Gallery</h2>
+   <div class="mobile-slideshow-container">
+    <div class="mobile-mySlides mobile-fade">
+        <img src="https://i.imgur.com/eQkmHx9.jpg" style="width: 100vw;height: 100vh">
+
+    </div>
+    <div class="mobile-mySlides mobile-fade">
+
+        <img src="https://i.imgur.com/QtMelqo.jpg" style="width: 100vw;height: 100vh">
+
+    </div>
+    <div class="mobile-mySlides mobile-fade">
+
+        <img src="https://i.imgur.com/IO2tBwy.jpg" style="width: 100vw;height: 100vh">
+
+    </div>
+    <div style="text-align:center; margin:-5vh;">
+
+        <span class="mobile-dot"></span>
+        <span class="mobile-dot"></span>
+        <span class="mobile-dot"></span>
+
+    </div>
+    <a class="mobile-prev" onclick="mobile_prevSlide()">&#10094;</a>
+    <a class="mobile-next" onclick="mobile_showSlides()">&#10095;</a>
+</div>
    <main class="gallary">
     <ul class='slider'>
       {% for image in images %}
@@ -455,7 +480,7 @@
             <h4 class="mobile">Mobile</h4>
             <p><a href="#">{{content.Phone}}</a></p>
             <h4 class="mail">Email</h4>
-            <p><a href="#">something@gmail.com</a></p>
+            <p><a href="#">{{content.email}}</a></p>
           </div>
         </div>
 
